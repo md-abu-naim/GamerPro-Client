@@ -7,6 +7,7 @@ import { Tooltip } from "react-tooltip";
 
 const Details = () => {
     const detailsData = useLoaderData()
+    console.log(detailsData);
     const { user } = useContext(AuthContext)
 
     const handleAddToWatchList = (e) => {

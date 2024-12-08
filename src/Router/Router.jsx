@@ -31,7 +31,7 @@ const Router = createBrowserRouter([
     {
         path: '/details/:id',
         element: <PrivateRouter><Details></Details></PrivateRouter>,
-        loader: ({ params }) => fetch(`hhttps://gamer-pro-server.vercel.app/details/${params.id}`)
+        loader: ({ params }) => fetch(`https://gamer-pro-server.vercel.app/details/${params.id}`)
     },
     {
         path: '/updateReview/:id',
