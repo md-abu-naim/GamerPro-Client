@@ -10,7 +10,7 @@ const HighRated = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch('http://localhost:5000/high')
+        fetch('https://gamer-pro-server.vercel.app/high')
             .then(res => res.json())
             .then(data => {
                 setRated(data)

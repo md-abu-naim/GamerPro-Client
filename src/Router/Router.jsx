@@ -21,22 +21,22 @@ const Router = createBrowserRouter([
     {
         path: '/allreviews',
         element: <AllReview></AllReview>,
-        loader: () => fetch('http://localhost:5000/reviews')
+        loader: () => fetch('https://gamer-pro-server.vercel.app/reviews')
     },
     {
         path: '/high',
         element: <HighRated></HighRated>,
-        loader: () => fetch('http://localhost:5000/high')
+        loader: () => fetch('https://gamer-pro-server.vercel.app/high')
     },
     {
         path: '/details/:id',
         element: <PrivateRouter><Details></Details></PrivateRouter>,
-        loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+        loader: ({ params }) => fetch(`hhttps://gamer-pro-server.vercel.app/details/${params.id}`)
     },
     {
         path: '/updateReview/:id',
         element: <UpdateReview></UpdateReview>,
-        loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+        loader: ({ params }) => fetch(`https://gamer-pro-server.vercel.app/details/${params.id}`)
     },
     {
         path: '/addreview',

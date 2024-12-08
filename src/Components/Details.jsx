@@ -29,7 +29,7 @@ const Details = () => {
         console.log(addwachlist)
 
 
-        fetch('http://localhost:5000/wachlist', {
+        fetch('https://gamer-pro-server.vercel.app/wachlist', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

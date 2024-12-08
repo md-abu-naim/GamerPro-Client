@@ -6,7 +6,7 @@ const GameWishList = () => {
     const { user } = useContext(AuthContext)
     const [reviews, setReviews] = useState()
     useEffect(() => {
-        fetch(`http://localhost:5000/GameWatchlist/${user?.email}`)
+        fetch(`https://gamer-pro-server.vercel.app/GameWatchlist/${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
 

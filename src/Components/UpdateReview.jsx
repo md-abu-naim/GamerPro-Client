@@ -26,7 +26,7 @@ const UpdateReview = () => {
         const updateReview = { gameCover, gameTitle, reviewDescription, rating, publishingYear, genre }
 
         // send data to the server and database
-        fetch(`http://localhost:5000/updatereview/${update._id}`, {
+        fetch(`https://gamer-pro-server.vercel.app/updatereview/${update._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
