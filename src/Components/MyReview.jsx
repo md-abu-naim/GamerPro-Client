@@ -67,8 +67,8 @@ const MyReview = () => {
                                 <th>Description</th>
                                 <th>Genre </th>
                                 <th>Rating</th>
-                               
-                             
+
+
                             </tr>
                         </thead>
                         <tbody>
@@ -77,13 +77,13 @@ const MyReview = () => {
                                     <th>1</th>
                                     <td>{rev.gameTitle}</td>
                                     <td>{rev.reviewDescription}</td>
-                                    <td>{rev. genre}</td>
+                                    <td>{rev.genre}</td>
                                     <td>{rev.rating}</td>
-                                   
-                                 
-                                 
+
+
+
                                     <td data-tooltip-id="my-tooltip" data-tooltip-content="If you update the review please click"><Link to={`/updatereview/${rev._id}`} className="btn btn-outline">Update</Link> </td>
-                                    <td data-tooltip-id="my-tooltip" data-tooltip-content="If you delete the review please click"><button onClick={()=> handleDelete(rev._id)} className="btn btn-outline">Delate</button></td>
+                                    <td data-tooltip-id="my-tooltip" data-tooltip-content="If you delete the review please click"><button onClick={() => handleDelete(rev._id)} className="btn btn-outline">Delate</button></td>
                                 </tr>)
                             }
 
