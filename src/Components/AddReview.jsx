@@ -16,15 +16,15 @@ const AddReview = () => {
         const gameCover = e.target.gameCover.value;
         const gameTitle = e.target.gameTitle.value;
         const reviewDescription = e.target.reviewDescription.value;
-        const rating= e.target.rating.value;
+        const rating = e.target.rating.value;
         const publishingYear = e.target.publishingYear.value;
         const genre = e.target.genre.value;
         const userEmail = e.target.userEmail.value;
-        const userName= e.target.userName.value;
-  
+        const userName = e.target.userName.value;
 
-         const newReview = { gameCover,gameTitle,reviewDescription,rating,publishingYear,genre,userEmail,userName}
-         console.log(newReview)
+
+        const newReview = { gameCover, gameTitle, reviewDescription, rating, publishingYear, genre, userEmail, userName }
+        console.log(newReview)
 
         // send data to the server and database
         fetch('https://gamer-pro-server.vercel.app/reviews', {
@@ -49,10 +49,10 @@ const AddReview = () => {
             })
 
     }
- 
+
     const genres = ["Action", "RPG", "Adventure", "Simulation", "Sports", "Puzzle"];
 
-   
+
 
     return (
         <div>
@@ -70,7 +70,7 @@ const AddReview = () => {
                             <input
                                 type="photo url"
                                 name="gameCover"
-                              
+
                                 placeholder="Enter image URL"
                                 className="input input-bordered w-full bg-gray-700 text-gray-200"
                                 required
@@ -83,7 +83,7 @@ const AddReview = () => {
                             <input
                                 type="text"
                                 name="gameTitle"
-                           
+
                                 placeholder="game title"
                                 className="input input-bordered w-full bg-gray-700 text-gray-200"
                                 required
@@ -95,7 +95,7 @@ const AddReview = () => {
                             </label>
                             <textarea
                                 name="reviewDescription"
-                       
+
                                 placeholder="Write your review here..."
                                 className="textarea textarea-bordered w-full bg-gray-700 text-gray-200"
                                 required
@@ -109,7 +109,7 @@ const AddReview = () => {
                                 <input
                                     type="number"
                                     name="rating"
-                                
+
                                     placeholder="Enter rating (1-10)"
                                     min="1"
                                     max="10"
@@ -124,7 +124,7 @@ const AddReview = () => {
                                 <input
                                     type="number"
                                     name="publishingYear"
-                                 
+
                                     placeholder="Enter year (e.g., 2024)"
                                     min="1900"
                                     max="2099"
@@ -139,7 +139,7 @@ const AddReview = () => {
                             </label>
                             <select
                                 name="genre"
-                            
+
                                 className="select select-bordered w-full bg-gray-700 text-gray-200"
                                 required
                             >
@@ -157,8 +157,8 @@ const AddReview = () => {
                             <input
                                 type="email"
                                 name="userEmail"
-                                 value={user?.email}
-                            
+                                value={user?.email}
+
                                 readOnly
                                 className="input input-bordered w-full bg-gray-700 text-gray-200"
                             />
@@ -171,7 +171,7 @@ const AddReview = () => {
                                 type="text"
                                 name="userName"
                                 value={user?.displayName}
-                            
+
                                 readOnly
                                 className="input input-bordered w-full bg-gray-700 text-gray-200"
                             />
