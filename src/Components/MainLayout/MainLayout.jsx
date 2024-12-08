@@ -11,11 +11,11 @@ const MainLayout = () => {
             <div>
                 <Navbar></Navbar>
                 <Banner></Banner>
-               <HighRated></HighRated>
+                <HighRated></HighRated>
                 <FeaturedGames></FeaturedGames>
                 <Outlet></Outlet>
                 <Footer></Footer>
-             
+
             </div>
         </div>
     );
