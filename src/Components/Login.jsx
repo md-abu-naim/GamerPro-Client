@@ -29,7 +29,7 @@ const Login = () => {
                     title: "Login is Successfully",
                     showConfirmButton: false,
                     timer: 1500
-                  });
+                });
                 navigate(location?.state ? location.state : '/')
                 event.target.reset();
             })
@@ -39,7 +39,7 @@ const Login = () => {
                     text: 'Do you want to continue',
                     icon: 'error',
                     confirmButtonText: 'Cool'
-                  })
+                })
             })
     }
 
