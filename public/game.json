@@ -1,0 +1,112 @@
+ [
+        {
+            "id": 1,
+            "gameCover": "https://i.ibb.co.com/LStWwvG/download-7-1.jpg",
+            "gameTitle": "The Last Journey",
+            "reviewDescription": "Amazing storyline and stunning graphics that immerse you in the game world.",
+            "rating": 9,
+            "publishingYear": 2022,
+            "genre": "Adventure",
+            "userEmail": "john.doe@example.com",
+            "userName": "John Doe"
+        },
+        {
+            "id": 2,
+            "gameCover": "https://i.ibb.co.com/cXmJWBL/download-7-2.jpg",
+            "gameTitle": "Warrior's Quest",
+            "reviewDescription": "Exciting combat system but the story could have been better developed.",
+            "rating": 7,
+            "publishingYear": 2023,
+            "genre": "Action",
+            "userEmail": "jane.smith@example.com",
+            "userName": "Jane Smith"
+        },
+        {
+            "id": 3,
+            "gameCover": "https://i.ibb.co.com/b34ynpk/download-7-3.jpg",
+            "gameTitle": "Mystic Realms",
+            "reviewDescription": "A masterpiece in RPG gaming with a vast, beautifully designed world.",
+            "rating": 10,
+            "publishingYear": 2021,
+            "genre": "RPG",
+            "userEmail": "alice.williams@example.com",
+            "userName": "Alice Williams"
+        },
+        {
+            "id": 4,
+            "gameCover": "https://i.ibb.co.com/M8BdCrd/download-7-4.jpg",
+            "gameTitle": "Speed Racers X",
+            "reviewDescription": "Fast-paced racing action with responsive controls and stunning visuals.",
+            "rating": 8,
+            "publishingYear": 2020,
+            "genre": "Sports",
+            "userEmail": "michael.jones@example.com",
+            "userName": "Michael Jones"
+        },
+        {
+            "id": 5,
+            "gameCover": "https://i.ibb.co.com/4TDpFrQ/download-7-5.jpg",
+            "gameTitle": "Puzzle Masters",
+            "reviewDescription": "Challenging and innovative puzzles that keep you thinking for hours.",
+            "rating": 9,
+            "publishingYear": 2024,
+            "genre": "Puzzle",
+            "userEmail": "emma.brown@example.com",
+            "userName": "Emma Brown"
+        },
+        {
+            "id": 6,
+            "gameCover": "https://i.ibb.co.com/6DnPpH1/download-7-6.jpg",
+            "gameTitle": "Zombie Apocalypse",
+            "reviewDescription": "An intense survival horror experience with great atmosphere and tension.",
+            "rating": 8,
+            "publishingYear": 2023,
+            "genre": "Action",
+            "userEmail": "robert.davis@example.com",
+            "userName": "Robert Davis"
+        },
+        {
+            "id": 7,
+            "gameCover": "https://i.ibb.co.com/tLwj7Qx/download-7-7.jpgg",
+            "gameTitle": "Fantasy Kingdoms",
+            "reviewDescription": "A strategy game that shines with its deep mechanics and engaging world-building.",
+            "rating": 7,
+            "publishingYear": 2022,
+            "genre": "Simulation",
+            "userEmail": "linda.martin@example.com",
+            "userName": "Linda Martin"
+        },
+        {
+            "id": 8,
+            "gameCover": "https://i.ibb.co.com/wzBtZBp/download-7-8.jpg",
+            "gameTitle": "Galaxy Defenders",
+            "reviewDescription": "An epic space shooter that offers thrilling battles and stunning interstellar visuals.",
+            "rating": 8,
+            "publishingYear": 2021,
+            "genre": "Action",
+            "userEmail": "david.miller@example.com",
+            "userName": "David Miller"
+        },
+        {
+            "id": 9,
+            "gameCover": "https://i.ibb.co.com/cvy5gLS/download-7-9.jpg",
+            "gameTitle": "Eternal Shadows",
+            "reviewDescription": "A dark and gripping story-driven game with compelling characters.",
+            "rating": 9,
+            "publishingYear": 2022,
+            "genre": "Adventure",
+            "userEmail": "sarah.johnson@example.com",
+            "userName": "Sarah Johnson"
+        },
+        {
+            "id": 10,
+            "gameCover": "https://i.ibb.co.com/JjDHZq4/download-7-10.jpg",
+            "gameTitle": "Cyber Worlds",
+            "reviewDescription": "A futuristic RPG with an incredible soundtrack and immersive gameplay.",
+            "rating": 10,
+            "publishingYear": 2023,
+            "genre": "RPG",
+            "userEmail": "alex.wilson@example.com",
+            "userName": "Alex Wilson"
+        }
+    ]
