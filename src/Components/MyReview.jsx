@@ -30,7 +30,7 @@ const MyReview = () => {
 
 
                 // delete from the database
-                fetch(`http://localhost:5000/reviews/${id}`, {
+                fetch(`https://gamer-pro-server.vercel.app/reviews/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
