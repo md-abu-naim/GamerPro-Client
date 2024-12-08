@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Tooltip } from "react-tooltip";
 
 const MyReview = () => {
     const { user } = useContext(AuthContext)
@@ -29,11 +30,12 @@ const MyReview = () => {
 
 
                 // delete from the database
-                fetch(`http://localhost:5000/myreview/${id}`, {
+                fetch(`http://localhost:5000/reviews/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
+                        console.log(data.deletedCount);
                         if (data.deletedCount) {
                             Swal.fire({
                                 title: "Deleted!",
@@ -80,8 +82,8 @@ const MyReview = () => {
                                    
                                  
                                  
-                                    <td><Link to={`/updatereview/${rev._id}`} className="btn btn-outline">Update</Link> </td>
-                                    <td><button onClick={()=> handleDelete(rev._id)} className="btn btn-outline">Delate</button></td>
+                                    <td data-tooltip-id="my-tooltip" data-tooltip-content="If you update the review please click"><Link to={`/updatereview/${rev._id}`} className="btn btn-outline">Update</Link> </td>
+                                    <td data-tooltip-id="my-tooltip" data-tooltip-content="If you delete the review please click"><button onClick={()=> handleDelete(rev._id)} className="btn btn-outline">Delate</button></td>
                                 </tr>)
                             }
 
@@ -92,7 +94,7 @@ const MyReview = () => {
 
 
             </div>
-
+            <Tooltip id="my-tooltip" />
         </div>
     );
 };

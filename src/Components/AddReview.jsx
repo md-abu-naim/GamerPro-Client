@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 import Navbar from "./MainLayout/Navbar";
 import Swal from "sweetalert2";
+import { Tooltip } from "react-tooltip";
 
 const AddReview = () => {
     const { user } = useContext(AuthContext)
@@ -172,16 +173,16 @@ const AddReview = () => {
                                 value={user?.displayName}
                             
                                 readOnly
-                                className="input input-bordered w-full bg-gray-100 text-gray-200"
+                                className="input input-bordered w-full bg-gray-700 text-gray-200"
                             />
                         </div>
-                        <button type="submit" className="btn btn-success w-full">
+                        <button data-tooltip-id="my-tooltip" data-tooltip-content="Add the Reviews" type="submit" className="btn btn-success w-full">
                             Submit Review
                         </button>
                     </form>
                 </div>
             </div>
-        
+            <Tooltip id="my-tooltip" />
         </div>
     );
 };

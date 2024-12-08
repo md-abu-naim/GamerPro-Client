@@ -3,6 +3,7 @@ import Navbar from "./MainLayout/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Tooltip } from "react-tooltip";
 
 const Details = () => {
     const detailsData = useLoaderData()
@@ -85,13 +86,14 @@ const Details = () => {
                             <p className="p-4 bg-gray-50 font-bold rounded-lg shadow-sm">{detailsData.reviewDescription}</p>
                         </div>
                         <div className="flex justify-start">
-                            <button onClick={() => handleAddToWatchList(detailsData)} className="btn btn-outline">Add to WatchList</button>
+                            <button data-tooltip-id="my-tooltip" data-tooltip-content="Add To your Watchlist Collection" onClick={() => handleAddToWatchList(detailsData)} className="btn btn-outline">Add to WatchList</button>
 
                         </div>
 
                     </div>
                 </div>
             </div>
+            <Tooltip id="my-tooltip" />
         </div>
 
 

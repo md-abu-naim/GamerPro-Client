@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
 
@@ -8,11 +10,11 @@ const Navbar = () => {
 
     const links = <>
 
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/allreviews'>All Reviews</NavLink></li>
-        <li><NavLink to='/addreview'>Add Review</NavLink></li>
-        <li><NavLink to='/myreview'>My Reviews</NavLink></li>
-        <li><NavLink to='/gamewishlist'>Game WatchLis</NavLink></li>
+        <li data-tooltip-id="my-tooltip" data-tooltip-content="Home"><NavLink to='/'>Home</NavLink></li>
+        <li data-tooltip-id="my-tooltip" data-tooltip-content="All Reviews"><NavLink to='/allreviews'>All Reviews</NavLink></li>
+        <li data-tooltip-id="my-tooltip" data-tooltip-content="Add Reviews"><NavLink to='/addreview'>Add Review</NavLink></li>
+        <li data-tooltip-id="my-tooltip" data-tooltip-content="My Reviews"><NavLink to='/myreview'>My Reviews</NavLink></li>
+        <li data-tooltip-id="my-tooltip" data-tooltip-content="My Game watchlist"><NavLink to='/gamewishlist'>Game WatchLis</NavLink></li>
         {
             <>
                 {/* <li><NavLink to='/'> About Dev Profile</NavLink></li> */}
@@ -60,7 +62,7 @@ const Navbar = () => {
                     {user && user?.email ? (
                         <div className="dropdown dropdown-end">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                <div className="w-10 rounded-full">
+                                <div data-tooltip-id="my-tooltip" data-tooltip-content={user.displayName} className="w-10 rounded-full">
                                     <img
                                         alt="Tailwind CSS Navbar component"
                                         src={user.photoURL} />
@@ -76,7 +78,7 @@ const Navbar = () => {
                                     </a>
                                 </li>
 
-                                <li>
+                                <li data-tooltip-id="my-tooltip" data-tooltip-content="Log Out">
                                     <button onClick={logOut} className="btn btn-neutral rounded-none">
 
                                         Log-Out
@@ -88,12 +90,13 @@ const Navbar = () => {
 
 
                     ) : (
-                        <Link to="/login" className="btn btn-neutral rounded-none">
+                        <Link to="/login" data-tooltip-id="my-tooltip" data-tooltip-content="This login button" className="btn btn-neutral rounded-none">
                             Login
                         </Link>
                     )}
                 </div>
             </div>
+            <Tooltip id="my-tooltip" />
         </div>
     );
 };

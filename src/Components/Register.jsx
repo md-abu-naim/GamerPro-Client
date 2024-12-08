@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import Navbar from "./MainLayout/Navbar";
 import { AuthContext } from "../Provider/AuthProvider";
-import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 const Register = () => {
     const location = useLocation();
@@ -23,6 +24,8 @@ const Register = () => {
          console.log(name, email, photo, passsward);
         setErrorMessage('')
         setSucces(false)
+
+        
         if (passsward.length < 6) {
             setErrorMessage('Passward should be 6 characters');
             return
@@ -44,16 +47,27 @@ const Register = () => {
                 setUser(user)
                 setSucces(true)
                 manegeProfile(name, photo)
-                toast.success('register succerfull')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Register is Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 navigate(location?.state ? location.state : "/")
 
 
             })
             .catch(error => {
              console.log('error',error.message);
-                toast.warn('not succces')
                 setErrorMessage(error.message);
                 setSucces(false)
+                Swal.fire({
+                    title: error.message,
+                    text: 'Do you want to continue',
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                  })
 
             })
 
@@ -73,20 +87,20 @@ const Register = () => {
                                         <label className="label">
                                             <span className="label-text">Name</span>
                                         </label>
-                                        <input type="name" placeholder="text" name="name" className="input input-bordered" required />
+                                        <input type="name" placeholder="Your Full Name" name="name" className="input input-bordered" required />
 
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+                                        <input type="email" placeholder="Your Email" name="email" className="input input-bordered" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Photo URL</span>
                                         </label>
-                                        <input type="text" placeholder="photo url" name="photo" className="input input-bordered" required />
+                                        <input type="text" placeholder="Photo URL" name="photo" className="input input-bordered" required />
 
                                     </div>
 

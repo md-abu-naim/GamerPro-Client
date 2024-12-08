@@ -2,8 +2,8 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router";
 import Navbar from "./MainLayout/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { toast } from "react-toastify";
 import { FaGoogle } from "react-icons/fa";
+import { Swal } from "sweetalert2/dist/sweetalert2";
 
 const Login = () => {
     const location = useLocation();
@@ -23,12 +23,23 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 setUser(user)
-                toast.success('Login succerfull')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Login is Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 navigate(location?.state ? location.state : '/')
                 event.target.reset();
             })
             .catch(error => {
-                toast.warn('give correct passward', error.message)
+                Swal.fire({
+                    title: error.message,
+                    text: 'Do you want to continue',
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                  })
             })
     }
 
@@ -64,7 +75,7 @@ const Login = () => {
                                     </div>
                                 </form>
                                 <div>
-                                    <p className="font-medium text-red-400 items-center flex justify-center p-5">Are you new here..?<Link to='/register'>  Register please!</Link></p>
+                                    <p className="font-medium text-red-400 items-center flex justify-center p-5">Are you new here..?<Link to='/register' className="text-blue-600 hover:underline">  Register please!</Link></p>
                                     <span onClick={googleSignIn} className="btn btn-xs p-5 bg-green-600 mb-6 ml-10"> <FaGoogle />  Google Login</span>
                                 </div>
                             </div>

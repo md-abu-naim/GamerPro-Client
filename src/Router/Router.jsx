@@ -30,7 +30,7 @@ const Router = createBrowserRouter([
     },
     {
         path: '/details/:id',
-        element: <Details></Details>,
+        element: <PrivateRouter><Details></Details></PrivateRouter>,
         loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
     },
     {
@@ -46,12 +46,12 @@ const Router = createBrowserRouter([
     },
     {
         path: '/myreview',
-        element: <MyReview></MyReview>,
+        element: <PrivateRouter><MyReview></MyReview></PrivateRouter>,
 
     },
     {
         path: '/gamewishlist',
-        element: <GameWishList></GameWishList>
+        element: <PrivateRouter><GameWishList></GameWishList></PrivateRouter>
 
     },
     {

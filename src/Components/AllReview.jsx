@@ -1,5 +1,6 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "./MainLayout/Navbar";
+import { Tooltip } from "react-tooltip";
 
 const AllReview = () => {
     const allReviews = useLoaderData()
@@ -29,13 +30,14 @@ const AllReview = () => {
                         <span className="font-medium">Publishing year:</span>{review.publishingYear}
                       </p>
                     <div className="card-actions">
-                  
+                  <Link to={`/details/${review._id}`} data-tooltip-id="my-tooltip" data-tooltip-content="Explore the Review Details" className="btn btn-primary">Explore Details</Link>
                     </div>
                      
                     </div>
                   </div> )
             }
           </div>
+          <Tooltip id="my-tooltip" />
         </div>
     );
 };
