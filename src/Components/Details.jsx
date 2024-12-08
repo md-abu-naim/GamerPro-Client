@@ -22,12 +22,7 @@ const Details = () => {
 
         const userEmail = user.email;
         const userName = user.displayName;
-
-
-
         const addwachlist = { gameCover, gameTitle, reviewDescription, rating, publishingYear, genre, email, name, userEmail, userName }
-        console.log(addwachlist)
-
 
         fetch('https://gamer-pro-server.vercel.app/wachlist', {
             method: 'POST',
