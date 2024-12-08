@@ -1,0 +1,24 @@
+[
+    {
+      "id": "1",
+      "title": "Eternal Odyssey",
+      "releaseDate": "2025-06-15",
+      "coverImage": "  https://i.ibb.co.com/jLfFtzM/2-D3-D-Game-Design.webp",
+      "description": "An epic RPG adventure with stunning visuals and deep storylines. Explore mystical lands and fight fierce enemies."
+    },
+    {
+      "id": "2",
+      "title": "Cyber Strike 2049",
+      "releaseDate": "2025-09-22",
+      "coverImage": "https://i.ibb.co.com/qnJjmhB/unnamed.webp",
+      "description": "A futuristic action-packed shooter game set in a cyberpunk world. Customize your character and fight for survival in a dystopian future."
+    },
+    {
+      "id": "3",
+      "title": "Mystic Legends",
+      "releaseDate": "2025-12-05",
+      "coverImage": "https://i.ibb.co.com/VgqvDcs/hq720.jpg",
+      "description": "A puzzle adventure game where you uncover ancient mysteries. Solve challenging puzzles and unlock the secrets of the lost civilization."
+    }
+  ]
+  

@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Banner from "./Banner";
 import FeaturedGames from "./FeaturedGames";
 import HighRated from "../HighRated";
+import UpcomingGames from "../UpcomingGames";
 
 const MainLayout = () => {
     return (
@@ -14,6 +15,7 @@ const MainLayout = () => {
                 <HighRated></HighRated>
                 <FeaturedGames></FeaturedGames>
                 <Outlet></Outlet>
+                <UpcomingGames />
                 <Footer></Footer>
 
             </div>
